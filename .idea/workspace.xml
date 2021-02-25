@@ -30,7 +30,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Escritorio/Modulo2/16-airtable/serie.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -41,7 +41,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614166890390</updated>
-      <workItem from="1614166892245" duration="8117000" />
+      <workItem from="1614166892245" duration="8274000" />
+      <workItem from="1614207089911" duration="110000" />
+      <workItem from="1614207202906" duration="1912000" />
+      <workItem from="1614250877132" duration="3512000" />
     </task>
     <servers />
   </component>
@@ -49,9 +52,9 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1614171707609">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1614207198875">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1614171707609" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1614207198875" />
   </component>
 </project>

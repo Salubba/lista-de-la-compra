@@ -47,30 +47,36 @@
 </head>
 <!--Contenido de la web-->
 <body>
-    <main id="app">
-        <section class="todo container">
-            <h1 class="text-center">Lista de la compra</h1>
-            <ul v-if="productos.length > 0" class="menu">
-                <li v-for="producto in productos" class="menu-item">
-                    <label class="form-checkbox">
-                        <input @click="actualizarAdquiridoEnApi(producto.id, !producto.fields.Adquirido)" type="checkbox" :checked="producto.fields.Adquirido">
-                            <i class="form-icon"></i> {{ producto.fields.Nombre }}
-                            &nbsp;&nbsp;<button
-                                        @click="borrarProducto(producto.id)"
-                                        class="btn btn-error">
-                                         Borrar
-                                        </button>
-                    </label>
-                    <div>
-                        <input @keypress.enter="actualizarProductoEnApi(producto.id, productoActualizar)"
-                                v-model="productoActualizar" type="text">
-                    </div>
-                    <!--menu divider-->
-                    <span class="divider"></span>
-                </li>
-            </ul>
-            <div v-else class="loading"></div>
+<main id="app">
+    <section class="todo container">
+        <h1 class="text-center">Lista de la compra</h1>
+        <section>
+            <input class="form-group" @keypress.enter="anyadirProducto" v-model="nuevoProducto" type="text">
         </section>
-    </main>
+        <ul v-if="productos.length > 0" class="menu">
+            <li v-for="producto in productos" class="menu-item">
+                <label v-if="producto.id !== productoEditar" class="form-checkbox">
+                    <input @click="actualizarAdquiridoEnAPI(producto.id, !producto.fields.Adquirido)" type="checkbox" :checked="producto.fields.Adquirido">
+                    <i class="form-icon"></i><span @click="abrirEditar(producto.id, producto.fields.Nombre)"> {{ producto.fields.Nombre }}</span>
+                    <button
+                            @click="borrarProducto(producto.id)"
+                            class="btn btn-error"
+                    >Borrar</button>
+                </label>
+                <div class="form-group" v-else>
+                    <input
+                            @keypress.enter="actualizarProductoEnAPI(producto.id, productoActualizar)"
+                            v-model="productoActualizar"
+                            type="text"
+                            class="form-input"
+                    >
+                </div>
+                <!-- menu divider -->
+                <span class="divider"></span>
+            </li>
+        </ul>
+        <div v-else class="loading"></div>
+    </section>
+</main>
 </body>
 </html>
