@@ -70,7 +70,8 @@ new Vue({
 
         },
         actualizarProductoEnAPI: function(id, nuevoTexto) {
-            fetch(URL_API_UPDATE, {
+            this.productoEditar = false;
+            fetch(URL_API_ACTUALIZAR, {
                 headers: {
                     'Content-type': 'application/json',
                     'Authorization': AUTHORIZATION
@@ -87,6 +88,7 @@ new Vue({
                     ]
                 })
             })
+                .then(() => this.obtenerProductos())
         },
         actualizarAdquiridoEnApi: function (id, checked) {
             fetch(URL_API_ACTUALIZAR, {
